@@ -738,19 +738,19 @@
 [data-color="pink"] .ui-datepicker-title,
 [data-color="pink"] .icon-sub-menu .up-icon,
 [data-color="pink"].demo-color {
-	background-color: #ea0253;
+	background-color: #E868C2;
 }
 
 [data-color="pink"] .title-style02,
 [data-color="pink"] .title-style02-light,
 [data-color="pink"] .blockquote_style02 {
-	border-left: 3px solid #ea0253;
+	border-left: 3px solid #E868C2;
 }
 [data-color="pink"] .currentLink,
 [data-color="pink"] .title-style01>h3,
 [data-color="pink"] .style-02 span,
 [data-color="pink"] .nav-tabs.nav-tabs-bottom > li.active > a {
-	border-bottom: 2px solid #ea0253;
+	border-bottom: 2px solid #E868C2;
 }
 [data-color="pink"] .contact-us a,
 [data-color="pink"] .content-wrap a,
@@ -772,13 +772,13 @@
 [data-color="pink"] .square10,
 [data-color="pink"] .square11,
 [data-color="pink"] #cdate {
-	color: #ea0253;
+	color: #E868C2;
 }
 [data-color="pink"] .pagination > .active > a {
-	border: 1px solid #ea0253;
+	border: 1px solid #E868C2;
 }
 [data-color="pink"] .navbar-nav > li.active > a {
-	background-color: #d2014a;
+	background-color: #c056a0;
 }
 [data-color="pink"] .sponsored:hover,
 [data-color="pink"] #sidebar-newsletter button:hover,
@@ -798,7 +798,7 @@
 [data-color="pink"] .block-title-1,
 [data-color="pink"] .block-title-2 {
 	color: #fff;
-	background-color: #ec1b64;
+	background-color: #ff70d4;
 }
 
 /*10.SLATE*/

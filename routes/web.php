@@ -18,17 +18,17 @@ use App\Http\Controllers\AdminController;
 */
 
 // Authentication Routes
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 // Home Route
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Admin Routes
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin')->middleware('role:admin');
+    Route::get('/', [AdminController::class, 'index'])->name('admin')->middleware(['role:admin', 'auth']);
 });
 
 // User Routes
 Route::group(['prefix' => 'user', 'middleware' => ['auth']], function () {
-    Route::get('/', [UserController::class, 'index'])->name('user')->middleware('role:user');
+    Route::get('/', [UserController::class, 'index'])->name('user')->middleware(['role:user', 'verified', 'auth']);
 });

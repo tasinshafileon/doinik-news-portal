@@ -1,19 +1,33 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
+    {{-- META TAGS --}}
+    <meta charset="utf-8">
+    <meta name="description" content="Doinik News Portal - Daily News"/>
+    <meta name="author" content="Tasin Shafi Leon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {{-- CSRF TOKEN --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    {{-- DYNAMIC TITLE SECTION --}}
+    <title>@yield('title')</title>
+    
+    {{-- FAVICON --}}
+    <link rel="icon" href="{{ url('favicon.ico') }}" type="image/x-icon">
 
-    <!-- Fonts -->
+    {{-- WEB FONTS --}}
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    
+    {{-- STYLESHEETS --}}
+    <link href="{{ url('css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css"/>
+    <link href="{{ url('css/icons.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ url('css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css"/>
 
-    <!-- Scripts -->
+    {{-- SCRIPTS --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
@@ -49,6 +63,13 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+
+                                    <button type="submit" class="btn btn-link nav-link">Logout</button>
+                                </form>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

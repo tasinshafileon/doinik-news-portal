@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Doinik News Portal - Daily News | Home')
+@section('title', 'Doinik News Portal | Home')
 
 @section('content')
 
@@ -10,7 +10,7 @@
         </div>
     </div>
     <!--========== BEGIN #WRAPPER ==========-->
-    <div id="wrapper" data-color="red">
+    <div id="wrapper" data-color="pink">
         <!--========== BEGIN #HEADER ==========-->
         <header id="header">
             <!-- Begin .top-menu -->
@@ -77,7 +77,7 @@
             <div class="container">
                 <!-- Begin .header-logo -->
                 <div class="header-logo">
-                    <a href="index.html"><img src="{{ url('img/logo.png') }}" alt="Site Logo" />
+                    <a href="index.html"><img src="{{ url('img/logo.png') }}" style="max-width: 46px" alt="Site Logo" />
                         <h1>24h <span>News</span></h1>
                         <h4>Your 24h News Source</h4>
                     </a>
