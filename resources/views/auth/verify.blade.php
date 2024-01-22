@@ -33,7 +33,7 @@
                                     <div class="p-2 mt-4">
                                         <h4>{{ __('Verify Your Email Address') }}</h4>
                                         @if (session('resent'))
-                                            <p>{{ __('A fresh verification link has been sent to your email address. Please check '). Auth::user()->email }}.
+                                            <p>{{ __('A fresh verification link has been sent to your email address. Please check ') . Auth::user()->email }}.
                                             </p>
                                             <div class="mt-4">
                                                 <a href="{{ route('home') }}" class="btn btn-success w-md">Verify email</a>
@@ -47,18 +47,26 @@
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
                         <div class="mt-5 text-center">
-                            <p>Didn't receive an email ? <button type="submit"
-                                    class="fw-medium text-primary">{{ __('click here to request another') }}</button>.</p>
-                            <p>©
-                                <script>
-                                    document.write(new Date().getFullYear())
-                                </script> Doinik. Crafted with <i class="mdi mdi-heart text-danger"></i> by
-                                Tasin Shafi Leon
+                            <p>Didn't receive an email?<button type="submit"
+                                    class="fw-medium text-primary border-0 bg-transparent">{{ __('click here to request another')}}</button>.
                             </p>
+                    </form>
+                    <form class="d-inline" method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <div class="m-5 text-center">
+                            <button type="submit"
+                                class="btn btn-danger w-md waves-effect waves-light">{{ __('Logout') }}</button>.
                         </div>
                     </form>
+                    <p>©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> Doinik. Crafted with <i class="mdi mdi-heart text-danger"></i> by
+                        Tasin Shafi Leon
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection

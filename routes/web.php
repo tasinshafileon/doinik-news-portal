@@ -25,10 +25,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Admin Routes
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-    Route::get('/', [AdminController::class, 'index'])->name('admin')->middleware(['role:admin', 'auth']);
+    Route::get('/', [AdminController::class, 'index'])->name('admin')->middleware(['role:admin']);
 });
 
 // User Routes
 Route::group(['prefix' => 'user', 'middleware' => ['auth']], function () {
-    Route::get('/', [UserController::class, 'index'])->name('user')->middleware(['role:user', 'verified', 'auth']);
+    Route::get('/', [UserController::class, 'index'])->name('user')->middleware(['role:user', 'verified']);
 });

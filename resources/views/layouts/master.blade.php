@@ -37,8 +37,17 @@
 
 <body>
 
-    @yield('content')
+    <div id="pageloader">
+        <div class="loader-item">
+            <img src="{{ url('img/load.gif') }}" alt="loader" />
+        </div>
+    </div>
+    <!--========== BEGIN #WRAPPER ==========-->
+    <div id="wrapper" data-color="pink">
 
+        @yield('content')
+
+    </div>
 </body>
 
 {{-- JAVASCRIPTS --}}
